@@ -24,7 +24,7 @@ Build an NLP-driven classification model to automatically predict sarcasm in new
 | Step | Description |
 |------|-------------|
 | **1. Data Acquisition** | Loaded Kaggle sarcasm dataset (`sarcasm.json`) with ~27k rows. |
-| **2. Data Cleaning** | Removed duplicates, dropped irrelevant `article_link` column → Final dataset shape: (26,708, 2). |
+| **2. Data Cleaning** | Removed duplicates, dropped irrelevant `article_link` column → Final dataset shape: (26708, 2). |
 | **3. Exploratory Data Analysis (EDA)** | Checked sarcasm vs non-sarcasm distribution. |
 | **4. Data Preprocessing** | Tokenized headlines using Hugging Face `bert-base-uncased`. Applied truncation & padding (max_length=100). Split dataset into train (18,695), validation (4,006), and test (4,007). |
 | **5. Model Architecture** | Custom PyTorch model: Frozen BERT embeddings → Dropout → Dense(384) → Dense(1, sigmoid). |
@@ -47,13 +47,13 @@ The dataset is relatively balanced between sarcastic and non-sarcastic headlines
 
 | Layer Name   | Layer Type       | Output Shape | Parameters |
 |--------------|------------------|--------------|------------|
-| bert         | BERT Embeddings  | (None, 100, 768) | 109M (frozen) |
+| bert         | BERT Embeddings  | (None, 100, 768) | 109M |
 | dropout      | Dropout (p=0.25) | (None, 768)  | 0 |
 | linear1      | Dense            | (None, 384)  | 295,296 |
 | linear2      | Dense            | (None, 1)    | 385 |
 | sigmoid      | Activation       | (None, 1)    | 0 |
 
-**Total Trainable Params:** ~295k (BERT weights frozen)  
+**Total Trainable Params:** ~295k 
 **Non-trainable Params:** 109M  
 
 ---
@@ -97,7 +97,7 @@ The dataset is relatively balanced between sarcastic and non-sarcastic headlines
 
 ## 🚀 Potential Improvements
 
-- Fine-tune BERT layers instead of keeping them frozen.  
+- Fine-tune BERT layers to improve results.
 - Experiment with other transformer architectures (RoBERTa, DistilBERT).  
 - Perform hyperparameter tuning for better optimization.  
 - Deploy as a web API or Streamlit app for real-time sarcasm detection.  
