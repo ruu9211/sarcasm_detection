@@ -1,6 +1,6 @@
-📝 Sarcasm Detection — NLP Text Classification
+# 📝 Sarcasm Detection — NLP Text Classification
 
-📌 Overview
+## 📌 Overview
 
 This project analyzes and classifies **news headlines** to detect **sarcasm** using Natural Language Processing (NLP) and Deep Learning with PyTorch and Hugging Face Transformers.
 
@@ -13,13 +13,13 @@ The goal is to leverage BERT embeddings with a custom neural classifier to deter
 
 ---
 
-🎯 Project Objective
+## 🎯 Project Objective
 
 Build an NLP-driven classification model to automatically predict sarcasm in news headlines. This enables applications in content moderation, sentiment analysis, and improving contextual understanding in conversational AI.
 
 ---
 
-🛠️ Project Workflow
+## 🛠️ Project Workflow
 
 | Step | Description |
 |------|-------------|
@@ -33,19 +33,17 @@ Build an NLP-driven classification model to automatically predict sarcasm in new
 
 ---
 
-📊 Exploratory Data Analysis (EDA)
+## 📊 Exploratory Data Analysis (EDA)
 
-1. **Class Distribution**
+**Class Distribution**
 
 The dataset is relatively balanced between sarcastic and non-sarcastic headlines.
 
-<p align="center">
-  <img src="image_1.png" alt="Sarcasm Class Distribution" width="500"/>
-</p>
+![Class Distribution](images/image_1.png)  
 
 ---
 
-🧩 Model Architecture Summary
+## 🧩 Model Architecture Summary
 
 | Layer Name   | Layer Type       | Output Shape | Parameters |
 |--------------|------------------|--------------|------------|
@@ -60,7 +58,7 @@ The dataset is relatively balanced between sarcastic and non-sarcastic headlines
 
 ---
 
-📊 Model Performance
+## 📊 Model Performance
 
 **Training Progress (10 epochs):**
 
@@ -76,13 +74,12 @@ The dataset is relatively balanced between sarcastic and non-sarcastic headlines
 - Validation Accuracy: ~86%  
 - Test Accuracy: ~86%  
 
-<p align="center">
-  <img src="image_2.png" alt="Training and Validation Performance" width="700"/>
-</p>
+![Val_Train Accuracy](images/image_2.png)  
+
 
 ---
 
-💡 Key Insights
+## 💡 Key Insights
 
 - BERT embeddings significantly improved performance compared to traditional word embeddings.  
 - Model achieved strong **generalization**, with training and validation accuracy both around 86–87%.  
@@ -90,7 +87,7 @@ The dataset is relatively balanced between sarcastic and non-sarcastic headlines
 
 ---
 
-⚠️ Challenges
+## ⚠️ Challenges
 
 - **GPU/CPU Constraints**: Training transformer-based models is compute-intensive.  
 - Due to Colab GPU limitations and CPU fallback, the model was only trained **once for 10 epochs**.  
@@ -98,7 +95,7 @@ The dataset is relatively balanced between sarcastic and non-sarcastic headlines
 
 ---
 
-🚀 Potential Improvements
+## 🚀 Potential Improvements
 
 - Fine-tune BERT layers instead of keeping them frozen.  
 - Experiment with other transformer architectures (RoBERTa, DistilBERT).  
@@ -107,13 +104,13 @@ The dataset is relatively balanced between sarcastic and non-sarcastic headlines
 
 ---
 
-📦 Tech Stack
+## 📦 Tech Stack
 
 - **Languages**: Python 🐍  
 - **Libraries**: Pandas, NumPy, Matplotlib, Scikit-learn, PyTorch, Hugging Face Transformers  
 
 ---
 
-📝 Notes
+## 📝 Notes
 
 - Dataset sourced from Kaggle → [News Headlines Dataset for Sarcasm Detection](https://www.kaggle.com/datasets/rmisra/news-headlines-dataset-for-sarcasm-detection)
