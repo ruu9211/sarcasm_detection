@@ -53,7 +53,7 @@ The dataset is relatively balanced between sarcastic and non-sarcastic headlines
 | linear2      | Dense            | (None, 1)    | 385 |
 | sigmoid      | Activation       | (None, 1)    | 0 |
 
-**Total Trainable Params:** ~295k 
+**Total Trainable Params:** ~295k |
 **Non-trainable Params:** 109M  
 
 ---
